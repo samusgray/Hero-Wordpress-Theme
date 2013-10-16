@@ -15,6 +15,65 @@ $context: 1200;
     }
 }
 
+%full-width-content {
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 99999px;
+  }
+  &:after {
+    right: 100%; 
+  }
+  &:before {
+    left: 100%;
+  }
+}
+
+%full-width-content-with-image {
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 999px;
+  }
+  &:after {
+    right: 100%; 
+  }
+  &:before {
+    left: 100%;
+  }
+}
+
+@mixin full($main-background: white, $left-background: red, $right-background: blue) {
+  @extend %full-width-content;
+  background-color: $main-background;
+  &:after {
+    background-color: $left-background;
+  }
+  &:before {
+    background-color: $right-background;
+  }
+}
+
+@mixin full-image($image-url) {
+  @extend %full-width-content-with-image;
+    background: url($image-url) no-repeat top center fixed;
+    background-size: cover;
+  &:after {
+    background: url($image-url) no-repeat top center fixed;
+    background-size: cover;
+  }
+  &:before {
+    background: url($image-url) no-repeat top center fixed;  
+    background-size: cover;
+  }
+}
+
 @mixin container() {
   max-width: $context + px;
   display: block;

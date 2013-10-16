@@ -51,7 +51,7 @@ a:active, a:hover { outline: 0; }
 /* ========================================================================== Typography ========================================================================== */
 /** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
 /* line 118, scss/scope/_normalize.scss */
-h1 { font-size: 2em; margin: 0.67em 0; }
+h1 { font-size: 2em; margin: 0; }
 
 /** Address styling not present in IE 8/9, Safari 5, and Chrome. */
 /* line 127, scss/scope/_normalize.scss */
@@ -174,58 +174,105 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* line 13, scss/scope/_scope.scss */
 .wrapper:after, .site-header-content:after { clear: both; }
 
+/* line 18, scss/scope/_scope.scss */
+.divider { position: relative; }
+/* line 20, scss/scope/_scope.scss */
+.divider:before, .divider:after { content: ''; position: absolute; top: 0; bottom: 0; width: 99999px; }
+/* line 27, scss/scope/_scope.scss */
+.divider:after { right: 100%; }
+/* line 30, scss/scope/_scope.scss */
+.divider:before { left: 100%; }
+
+/* line 35, scss/scope/_scope.scss */
+.site-header { position: relative; }
+/* line 37, scss/scope/_scope.scss */
+.site-header:before, .site-header:after { content: ''; position: absolute; top: 0; bottom: 0; width: 999px; }
+/* line 44, scss/scope/_scope.scss */
+.site-header:after { right: 100%; }
+/* line 47, scss/scope/_scope.scss */
+.site-header:before { left: 100%; }
+
 /* line 4, scss/_global.scss */
 html { font-size: 62.5%; }
 
+@font-face { font-family: 'human_italic'; src: url("font/human_italic/CoreHumanistSans-Italic-webfont.eot"); src: url("font/human_italic/CoreHumanistSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("font/human_italic/CoreHumanistSans-Italic-webfont.woff") format("woff"), url("font/human_italic/CoreHumanistSans-Italic-webfont.ttf") format("truetype"), url("font/human_italic/CoreHumanistSans-Italic-webfont.svg#corehumanistsans-italicRg") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'human_light'; src: url("font/human_light/CoreHumanistSans-Light-webfont.eot"); src: url("font/human_light/CoreHumanistSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("font/human_light/CoreHumanistSans-Light-webfont.woff") format("woff"), url("font/human_light/CoreHumanistSans-Light-webfont.ttf") format("truetype"), url("font/human_light/CoreHumanistSans-Light-webfont.svg#corehumanistsanslightregular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'human'; src: url("font/human_regular/CoreHumfont/human_light/anistSans-Regular-webfont.eot"); src: url("font/human_regular/CoreHumanistSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("font/human_regular/CoreHumanistSans-Regular-webfont.woff") format("woff"), url("font/human_regular/CoreHumanistSans-Regular-webfont.ttf") format("truetype"), url("font/human_regular/CoreHumanistSans-Regular-webfont.svg#corehumanistsansregular") format("svg"); font-weight: normal; font-style: normal; }
+
 /* Text meant only for screen readers */
-/* line 24, scss/_global.scss */
+/* line 59, scss/_global.scss */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
 
-/* line 31, scss/_global.scss */
+/* line 66, scss/_global.scss */
 .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar */ }
 
 /* line 1, scss/_layout.scss */
+html, body, .site { overflow-x: hidden; height: 100%; }
+
+/* line 6, scss/_layout.scss */
 .wrapper { max-width: 1200px; display: block; margin-left: auto; margin-right: auto; }
 
-/* line 5, scss/_layout.scss */
+/* line 10, scss/_layout.scss */
 .site-header-content { max-width: 1200px; display: block; margin-left: auto; margin-right: auto; }
 
 /* =Menu
 ----------------------------------------------- */
-/* line 12, scss/_layout.scss */
+/* line 17, scss/_layout.scss */
 .main-navigation { clear: both; display: block; float: left; width: 100%; }
 
-/* line 18, scss/_layout.scss */
+/* line 23, scss/_layout.scss */
 .main-navigation ul { list-style: none; margin: 0; padding-left: 0; }
 
-/* line 23, scss/_layout.scss */
+/* line 28, scss/_layout.scss */
 .main-navigation li { float: left; position: relative; }
 
-/* line 27, scss/_layout.scss */
+/* line 32, scss/_layout.scss */
 .main-navigation a { display: block; text-decoration: none; }
 
-/* line 31, scss/_layout.scss */
+/* line 36, scss/_layout.scss */
 .main-navigation ul ul { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); display: none; float: left; left: 0; position: absolute; top: 1.5em; z-index: 99999; }
 
-/* line 40, scss/_layout.scss */
+/* line 45, scss/_layout.scss */
 .main-navigation ul ul ul { left: 100%; top: 0; }
 
-/* line 44, scss/_layout.scss */
+/* line 49, scss/_layout.scss */
 .main-navigation ul ul a { width: 200px; }
 
-/* line 55, scss/_layout.scss */
+/* line 60, scss/_layout.scss */
 .main-navigation ul li:hover > ul { display: block; }
 
 /* Small menu */
-/* line 63, scss/_layout.scss */
+/* line 68, scss/_layout.scss */
 .menu-toggle { cursor: pointer; display: none; }
 
-@media screen and (max-width: 600px) { /* line 70, scss/_layout.scss */
+@media screen and (max-width: 600px) { /* line 75, scss/_layout.scss */
   .menu-toggle, .main-navigation.toggled .nav-menu { display: block; }
-  /* line 74, scss/_layout.scss */
+  /* line 79, scss/_layout.scss */
   .main-navigation ul { display: none; } }
 /* line 1, scss/_theme.scss */
+h1 { font-family: human_light, helvetica, sans-serif; font-size: 65px; letter-spacing: 4px; text-transform: uppercase; font-weight: 100; }
+
+/* line 9, scss/_theme.scss */
+.site-header { background: url("img/full-bg.png") no-repeat top center fixed; background-size: cover; height: 100%; }
+/* line 67, scss/scope/_scope.scss */
+.site-header:after { background: url("img/full-bg.png") no-repeat top center fixed; background-size: cover; }
+/* line 71, scss/scope/_scope.scss */
+.site-header:before { background: url("img/full-bg.png") no-repeat top center fixed; background-size: cover; }
+
+/* line 14, scss/_theme.scss */
 .btn, .btn-alt { text-transform: uppercase; text-decoration: none; color: white; font-family: source, sans-serif; font-size: 20px; font-size: 2rem; padding: 10px 20px; background-color: #09aaa2; display: inline-block; border: solid white 2px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+
+/* line 31, scss/_theme.scss */
+.divider { text-align: center; text-transform: uppercase; color: #09aaa2; background-color: #414042; }
+/* line 55, scss/scope/_scope.scss */
+.divider:after { background-color: #414042; }
+/* line 58, scss/scope/_scope.scss */
+.divider:before { background-color: #414042; }
+
+/* line 38, scss/_theme.scss */
+.divider-triangle { content: ''; display: inline-block; position: relative; top: 40px; border: 20px solid transparent; width: 1px; height: 0px; border-top-color: #414042; }
 
 /* =Repeatable patterns
 -------------------------------------------------------------- */

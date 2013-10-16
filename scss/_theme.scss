@@ -1,3 +1,16 @@
+h1 {
+  font-family: $human_light;
+  font-size: 65px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.site-header {
+  @include full-image('img/full-bg.png');
+  height: 100%;
+}
+
 .btn {
   text-transform: uppercase;
   text-decoration: none;
@@ -13,4 +26,22 @@
 
 .btn-alt {
   @extend .btn;
+}
+
+.divider {
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand;
+  @include full($black, $black, $black);
+}
+
+.divider-triangle {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: 40px;
+  border: 20px solid transparent;
+  width: 1px;
+  height: 0px;
+  border-top-color: $black;
 }

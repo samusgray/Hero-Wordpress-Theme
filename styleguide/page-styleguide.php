@@ -14,14 +14,36 @@
   .hide {
     display: none;
   }
+
+  .style-buttons {
+    background-color: black;
+    padding: 20px 20px;
+  }
+
 </style>
 
   <div id="primary" class="site-content style-layout">
     <div id="content" role="main">
 
       <?php while ( have_posts() ) : the_post(); ?>
-        
-      <?php include('_buttons.php'); ?>
+      
+      <div class="divider">
+        <h1 class="divider-title">Typography</h1>
+        <div class="divider-triangle"></div>
+      </div> 
+
+      <section>
+        <h1>asdf</h1>
+      </section>
+
+      <div class="divider">
+        <h1>Buttons</h1>
+        <div class="divider-triangle"></div>
+      </div>        
+      
+      <section class="style-buttons">
+        <?php include('_buttons.php'); ?>
+      </section>
 
       <?php endwhile; // end of the loop. ?>
 
