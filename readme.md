@@ -4,8 +4,8 @@
 
 ### Includes:
 
-#### Normalize.css
-#### Sass w/ Compass
+- Normalize.css
+- Sass w/ Compass
 #### JS minification / concatination
 #### HTTP Compression
 #### Basic theme templates (page.php, header.php, 404.php, etc.)
