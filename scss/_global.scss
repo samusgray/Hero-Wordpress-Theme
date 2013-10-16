@@ -1,0 +1,48 @@
+
+// Fonts
+
+html {
+  font-size: 62.5%; // Sets up the Base 10 stuff
+}
+
+// @fontface here
+
+// Colors
+$brand:        #09AAA2;
+$brand-dark:   #00726C;
+$brand-darker: #00403d;
+$off-white:    #F7F7F7;
+$white:        #FFFFFF;
+$grey:         #E1E3E3;
+$dark-grey:    #78767a;
+$black:        #414042;
+$body-copy:    #666;
+$link-color:   #666;
+$link-hover:   #666;
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
+}
