@@ -1,0 +1,53 @@
+@import "reset";
+
+$context: 1200;
+
+%clearfix { 
+	zoom:1; 
+    &:before, &:after { 
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin container() {
+  max-width: $context + px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @extend %clearfix;
+}
+
+@mixin row($width: $context) {
+	max-width: $width + px;
+  display: block;
+	margin-left: auto;
+	margin-right: auto;
+	@extend %clearfix;
+}
+
+@mixin span($target) {
+	$element-width: percentage($target/$context);
+	width: $element-width;
+	display: block;
+	float: left;
+}
+
+@mixin nest($nested-target, $nested-context) {
+	width: percentage($nested-target/$nested-context);
+	display: block;
+	float: left;
+}
+
+
+// Fonts
+
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem; // Convert pixels to decimal
+}
