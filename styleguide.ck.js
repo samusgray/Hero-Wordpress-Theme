@@ -1,0 +1,1 @@
+jQuery(function(e){e("code").each(function(){preview=e(this).clone().html().replace(/</g,"&lt;").replace(/>/g,"&gt;");e(this).html(preview)});e("button").click(function(){e(this).siblings("code").toggleClass("hide")})});
