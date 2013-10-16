@@ -224,6 +224,9 @@ html { font-size: 62.5%; }
   .menu-toggle, .main-navigation.toggled .nav-menu { display: block; }
   /* line 74, scss/_layout.scss */
   .main-navigation ul { display: none; } }
+/* line 1, scss/_theme.scss */
+.btn, .btn-alt { text-transform: uppercase; text-decoration: none; color: white; font-family: source, sans-serif; font-size: 20px; font-size: 2rem; padding: 10px 20px; background-color: #09aaa2; display: inline-block; border: solid white 2px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; }
+
 /* =Repeatable patterns
 -------------------------------------------------------------- */
 /* Responsive images */

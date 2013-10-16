@@ -1,7 +1,6 @@
-// jQuery(function($) {
-//   $test = $('.site-title')
-//   alert($test);
-// });
+jQuery(function($) {
+
+});
 
 /**
  *

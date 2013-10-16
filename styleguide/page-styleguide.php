@@ -10,11 +10,19 @@
 
  get_header(); ?>
 
-  <div id="primary" class="site-content">
+<style>
+  .hide {
+    display: none;
+  }
+</style>
+
+  <div id="primary" class="site-content style-layout">
     <div id="content" role="main">
 
       <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( 'content', 'page' ); ?>
+        
+      <?php include('_buttons.php'); ?>
+
       <?php endwhile; // end of the loop. ?>
 
     </div><!-- #content -->

@@ -1,0 +1,16 @@
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $white;
+  font-family: source, sans-serif;
+  @include font-size(20);
+  padding: 10px 20px;
+  background-color: $brand;
+  display: inline-block;
+  border: solid $white 2px;
+  @include border-radius(3px);
+}
+
+.btn-alt {
+  @extend .btn;
+}
