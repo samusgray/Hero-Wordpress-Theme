@@ -9,6 +9,7 @@
 - Small mixin library for type and layout
 - JS minification / concatination
 - HTTP Compression
+- jQuery CDN and local fallback
 - Basic theme templates (page.php, header.php, 404.php, etc.)
 - Useful functions.php file
 - .gitignore
