@@ -11,8 +11,7 @@ Developed by Aaron Gray
 
 @import "compass/css3";
 @import "scope/scope";
-@import "vars";
+@import "global";
+@import "layout";
+@import "theme"; 
 @import "wp_functions";
-@import "sink";
-@import "nav";
-@import "theme";
