@@ -6,13 +6,13 @@ h1 {
   font-weight: 100;
 }
 
-.site-header {
+.divider {
   @include full-image('img/full-bg.png');
-  height: 100%;
+  height: 50%;
 }
 
-.btn {
-  text-transform: uppercase;
+.btn { 
+  text-transform: uppercase; 
   text-decoration: none;
   color: $white;
   font-family: source, sans-serif;

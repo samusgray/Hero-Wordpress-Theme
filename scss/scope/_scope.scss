@@ -61,15 +61,15 @@ $context: 1200;
 }
 
 @mixin full-image($image-url) {
-  @extend %full-width-content-with-image;
-    background: url($image-url) no-repeat top center fixed;
+  @extend %full-width-content;
+    background: url($image-url) no-repeat center center fixed;
     background-size: cover;
   &:after {
-    background: url($image-url) no-repeat top center fixed;
+    background: url($image-url) no-repeat center center fixed;
     background-size: cover;
   }
   &:before {
-    background: url($image-url) no-repeat top center fixed;  
+    background: url($image-url) no-repeat center center fixed;  
     background-size: cover;
   }
 }
