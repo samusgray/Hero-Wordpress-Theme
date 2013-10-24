@@ -10,18 +10,6 @@
 
  get_header(); ?>
 
-<style>
-  .hide {
-    display: none;
-  }
-
-  .style-buttons {
-    background-color: black;
-    padding: 20px 20px;
-  }
-
-</style>
-
   <div id="primary" class="site-content style-layout">
     <div id="content" role="main">
 

@@ -6,12 +6,13 @@ Author: Commerce Kitchen
 Author URI: http://commercekitchen.com
 Version: 1.0 
 Designed by Alex Hoffman
-Developed by Aaron Gray
+Developed by Aaron Gray 
 */
 
 @import "compass/css3";
 @import "scope/scope";
 @import "global";
+@import "util";
 @import "layout";
 @import "theme"; 
 @import "wp_functions";

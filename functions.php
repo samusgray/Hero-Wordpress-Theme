@@ -81,11 +81,16 @@ function twentytwelve_scripts_styles() {
   global $wp_styles;
   
   wp_enqueue_style( 'ckhero-style', get_stylesheet_uri() );   // Load our main stylesheet.
-  wp_enqueue_script( 'ck-functions', get_template_directory_uri() . '/js/functions.ck.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'ck-functions', get_template_directory_uri() . '/js/functions.ck.js', array('jquery'), '1.0', true );  
   
   // Load the Internet Explorer specific stylesheet.
   wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'ckhero-style' ), '20121010' );
   $wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+
+  // If we are on localhost, please load the livereload script provided by grunt.js
+  if(!(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)){
+     wp_enqueue_script( 'livereload', 'http://localhost:35729/livereload.js' );
+  }
 
   if (is_page(styleguide))
     wp_enqueue_script( 'ck-styleguide', get_template_directory_uri() . '/styleguide/styleguide.js', array('jquery'), true );
