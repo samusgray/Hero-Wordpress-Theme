@@ -1,5 +1,5 @@
 /*!  
-Theme Name: Ck Hero
+Theme Name: Ck Hero New _hero
 Theme URI: http://commercekitchen.com
 Description: A heroic theme customized just for you.
 Author: Commerce Kitchen
@@ -9,10 +9,21 @@ Designed by Alex Hoffman
 Developed by Aaron Gray 
 */
 
+/////////
+// Core
+////////
 @import "compass/css3";
 @import "scope/scope";
 @import "global";
-@import "util";
+
+// Components
+@import "util"; 
+@import "components/components"; 
+@import "includes/includes";
+
+//Theme
 @import "layout";
 @import "theme"; 
+
+// Vendors
 @import "wp_functions";

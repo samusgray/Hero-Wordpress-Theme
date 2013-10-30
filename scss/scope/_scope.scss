@@ -1,6 +1,8 @@
-@import "normalize";
+@import "reset";
 
 $context: 1200;
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 %clearfix { 
 	zoom:1; 
@@ -49,9 +51,22 @@ $context: 1200;
   }
 }
 
+@mixin triangle($size, $offset, $color) {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: $offset;
+  border: $size solid transparent;
+  width: 1px;
+  height: 0px;
+  border-top-color: $color;
+}
+
 @mixin full($main-background: white, $left-background: red, $right-background: blue) {
   @extend %full-width-content;
   background-color: $main-background;
+  display: inline-block;
+  width: 100%;
   &:after {
     background-color: $left-background;
   }
@@ -74,7 +89,9 @@ $context: 1200;
   }
 }
 
-@mixin container() {
+// Layout
+
+@mixin container($context: $context) {
   max-width: $context + px;
   display: block;
   margin-left: auto;
@@ -103,8 +120,20 @@ $context: 1200;
 	float: left;
 }
 
+@mixin push-left($margin) {
+  margin-left: percentage($margin / $context);
+}
+
+@mixin push-right($margin) {
+  margin-right: percentage($margin / $context);
+}
 
 // Fonts
+
+// Fonts
+html {
+  font-size: 62.5%; // Sets up the Base 10 stuff
+}
 
 @mixin font-size($sizeValue: 16) {
   font-size: $sizeValue + px;

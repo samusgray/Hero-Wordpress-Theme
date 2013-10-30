@@ -1,0 +1,18 @@
+@mixin btn($button-type: light) {
+  @if $button-type == 'dark' {
+    $border-color: $brand-dark;
+    border: solid $border-color 2px;
+  }
+  @else if $button-type == 'light' {
+    $border-color: $white;
+    border: solid $border-color 2px;
+  }
+}
+
+.btn {
+  @include btn(light);
+}
+
+.btn-alt {
+  @include btn(dark);
+}
