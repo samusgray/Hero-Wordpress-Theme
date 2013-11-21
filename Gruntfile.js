@@ -32,6 +32,7 @@ module.exports = function(grunt) {
         }
       }
     },
+  
   csscss: {
     options: {
       compass: true,
@@ -41,11 +42,27 @@ module.exports = function(grunt) {
     dist: {
       src: ['style.css']
     }
+  },
+  
+  autoprefixer: {
+
+    options: {
+      // Task-specific options go here.
+    },
+
+    // just prefix the specified file
+    single_file: {
+      options: {
+        // Target-specific options go here.
+      },
+      src: 'style.css',
+      dest: 'style.css'
+    }
   }
   
   });
 
   grunt.registerTask('default', 'watch');
-  grunt.registerTask('check', 'csscss');
+  grunt.registerTask('check', ['autoprefixer', 'csscss']);
 
 }

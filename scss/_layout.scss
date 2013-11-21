@@ -4,18 +4,13 @@ html, body, .site {
   background: $white;
 }
 
-.wrapper {
+@media screen and (max-width: 600px) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
 
-}
-
-.site-content {
-
-}
-
-.sidebar {
-
-}
-
-.page-content {
-
+  .main-navigation ul {
+    display: none;
+  }
 }

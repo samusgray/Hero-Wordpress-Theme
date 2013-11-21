@@ -28,3 +28,9 @@
 .contrast-link {
   color: $white; 
 }
+
+
+// Do not use this class in the templates. This is strictly to test clearing floats via Chrome Dev Tools.
+.clear {
+  @extend %clearfix;
+}

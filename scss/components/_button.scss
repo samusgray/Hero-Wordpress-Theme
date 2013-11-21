@@ -1,4 +1,5 @@
 @mixin btn($button-type: light) {
+
   @if $button-type == 'dark' {
     $border-color: $brand-dark;
     border: solid $border-color 2px;
@@ -7,6 +8,7 @@
     $border-color: $white;
     border: solid $border-color 2px;
   }
+
 }
 
 .btn {
