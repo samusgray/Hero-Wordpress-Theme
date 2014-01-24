@@ -13,9 +13,9 @@
 <div id="primary" class="site-content style-layout">
 
   <section id="content" class="page-content--with-sidebar">
-    <?php include('components/_typography.php'); ?>
-    <?php include('components/_buttons.php'); ?>   
-    <?php include('components/_driverr.php'); ?>
+    <?php include('components/typography/_typography.php'); ?>
+    <?php include('components/buttons/_buttons.php'); ?>   
+    <?php include('components/driver/_driverr.php'); ?>
   </section><!-- #content -->
 
   <?php get_sidebar(); ?>
