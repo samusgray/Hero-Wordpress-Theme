@@ -5,10 +5,12 @@
     "grunt": "~0.4.1",
     "grunt-contrib-compass": "~0.2.0",
     "grunt-contrib-watch": "~0.4.3",
-    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.5",
     "matchdep": "~0.1.2",
     "grunt-csscss": "~0.6.1",
     "grunt-contrib-csslint": "~0.1.2",
-    "grunt-autoprefixer": "~0.4.0"
+    "grunt-autoprefixer": "~0.4.0",
+    "grunt-csso": "~0.5.0",
+    "grunt-scaffold": "~0.1.1"
   }
 }

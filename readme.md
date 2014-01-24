@@ -4,9 +4,11 @@
 
 ### Includes:
 
-- Normalize.css
+- Live Styleguide
+- Useful Grunt plugins
 - Sass w/ Compass
 - Small mixin library for type and layout
+- Reset.css
 - JS minification / concatination
 - HTTP Compression
 - jQuery CDN and local fallback
@@ -19,9 +21,5 @@
 
 - HTML5 Reset Theme
 - YeoPress Yeoman Generator
+- _s Theme
 - Twenty Twelve Wordpress Theme
-
-### Comming soon:
-
-- Live StyleGuide (in development)
-- Grunt for Scss

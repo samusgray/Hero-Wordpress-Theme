@@ -12,49 +12,17 @@
 
 <div id="primary" class="site-content style-layout">
 
-    <?php include('components/_divider.php'); ?>
-
   <section id="content" class="page-content--with-sidebar">
-    <section class="style-item">
-      <?php include('components/_typography.php'); ?>
-    </section>
-    <section class="style-item">
-      <?php include('components/_featured-image.php'); ?>
-    </section>    
-    <section class="style-item">
-      <?php include('components/_text.php'); ?>
-    </section>    
-    <section class="style-item">
-      <?php include('components/_blog-single-header.php'); ?>
-    </section>    
-    <section class="style-item">
-      <?php include('components/_testimonial.php'); ?>
-    </section>    
-    <section class="style-item">
-      <?php include('components/_map.php'); ?>
-    </section>
+    <?php include('components/_typography.php'); ?>
+    <?php include('components/_buttons.php'); ?>   
+    <?php include('components/_driverr.php'); ?>
   </section><!-- #content -->
 
-  <aside class="sidebar">
-    <section class="style-item">
-      <?php include('components/_buttons.php'); ?>   
-    </section>
-    <section class="style-item">
-      <?php include('components/_drivers.php'); ?>
-    </section>    
-    <section class="style-item">    
-      <?php include('components/_testimonial--small.php'); ?>
-    </section>
-    <section class="style-item">      
-      <?php include('components/_form-small.php'); ?>
-    </section>
-  </aside>
+  <?php get_sidebar(); ?>
 
-<section class="page-content">
-  <?php include('components/_staff.php'); ?>
-  <?php include("components/_hero.php"); ?>
-  <?php include("components/_accordion.php"); ?>
-</section>
+  <section class="page-content">
+  
+  </section>
 
 </div><!-- #primary -->
 

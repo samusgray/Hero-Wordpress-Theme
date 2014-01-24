@@ -77,15 +77,15 @@ function wps_enqueue_jquery() {
 
 
 // Enqueues scripts and styles for front-end.
-function twentytwelve_scripts_styles() {
+function _hero_scripts_styles() {
   global $wp_styles;
   
   wp_enqueue_style( 'ckhero-style', get_stylesheet_uri() );   // Load our main stylesheet.
   wp_enqueue_script( 'ck-functions', get_template_directory_uri() . '/js/functions.ck.js', array('jquery'), '1.0', true );  
   
   // Load the Internet Explorer specific stylesheet.
-  wp_enqueue_style( 'twentytwelve-ie', get_template_directory_uri() . '/css/ie.css', array( 'ckhero-style' ), '20121010' );
-  $wp_styles->add_data( 'twentytwelve-ie', 'conditional', 'lt IE 9' );
+  wp_enqueue_style( '_hero-ie', get_template_directory_uri() . '/css/ie.css', array( 'ckhero-style' ), '20121010' );
+  $wp_styles->add_data( '_hero-ie', 'conditional', 'lt IE 9' );
 
   // If we are on localhost, please load the livereload script provided by grunt.js
   if(!(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)){
@@ -95,7 +95,7 @@ function twentytwelve_scripts_styles() {
   if (is_page(styleguide))
     wp_enqueue_script( 'ck-styleguide', get_template_directory_uri() . '/styleguide/styleguide.js', array('jquery'), true );
 }
-add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
+add_action( 'wp_enqueue_scripts', '_hero_scripts_styles' );
 
 	//Add Featured Image Support
 	add_theme_support('post-thumbnails');
@@ -133,15 +133,15 @@ add_action( 'wp_enqueue_scripts', 'twentytwelve_scripts_styles' );
 }
 add_action( 'widgets_init', 'register_widgets' );
 
-if ( ! function_exists( 'twentytwelve_entry_meta' ) ) :
+if ( ! function_exists( '_hero_entry_meta' ) ) :
 
   //Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
-function twentytwelve_entry_meta() {
+function _hero_entry_meta() {
   // Translators: used between list items, there is a space after the comma.
-  $categories_list = get_the_category_list( __( ', ', 'twentytwelve' ) );
+  $categories_list = get_the_category_list( __( ', ', '_hero' ) );
 
   // Translators: used between list items, there is a space after the comma.
-  $tag_list = get_the_tag_list( '', __( ', ', 'twentytwelve' ) );
+  $tag_list = get_the_tag_list( '', __( ', ', '_hero' ) );
 
   $date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>',
     esc_url( get_permalink() ),
@@ -151,17 +151,17 @@ function twentytwelve_entry_meta() {
   );
   $author = sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
     esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-    esc_attr( sprintf( __( 'View all posts by %s', 'twentytwelve' ), get_the_author() ) ),
+    esc_attr( sprintf( __( 'View all posts by %s', '_hero' ), get_the_author() ) ),
     get_the_author()
   );
 
   // Translators: 1 is category, 2 is tag, 3 is the date and 4 is the author's name.
   if ( $tag_list ) {
-    $utility_text = __( 'This entry was posted in %1$s and tagged %2$s on %3$s<span class="by-author"> by %4$s</span>.', 'twentytwelve' );
+    $utility_text = __( 'This entry was posted in %1$s and tagged %2$s on %3$s<span class="by-author"> by %4$s</span>.', '_hero' );
   } elseif ( $categories_list ) {
-    $utility_text = __( 'This entry was posted in %1$s on %3$s<span class="by-author"> by %4$s</span>.', 'twentytwelve' );
+    $utility_text = __( 'This entry was posted in %1$s on %3$s<span class="by-author"> by %4$s</span>.', '_hero' );
   } else {
-    $utility_text = __( 'This entry was posted on %3$s<span class="by-author"> by %4$s</span>.', 'twentytwelve' );
+    $utility_text = __( 'This entry was posted on %3$s<span class="by-author"> by %4$s</span>.', '_hero' );
   }
 
   printf(

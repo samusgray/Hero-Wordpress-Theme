@@ -12,7 +12,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', '_hero' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header>
 
 			<?php /* Start the Loop */ ?>
@@ -24,11 +24,11 @@ get_header(); ?>
 
 			<article id="post-0" class="post no-results not-found">
 				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Nothing Found', '_hero' ); ?></h1>
 				</header>
 
 				<div class="entry-content">
-					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'twentytwelve' ); ?></p>
+					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', '_hero' ); ?></p>
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 -->
