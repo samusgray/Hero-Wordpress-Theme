@@ -99,14 +99,6 @@ $context: 1200;
   @extend %clearfix;
 }
 
-@mixin row($width: $context) {
-	max-width: $width + px;
-  display: block;
-	margin-left: auto;
-	margin-right: auto;
-	@extend %clearfix;
-}
-
 @mixin span($target) {
 	$element-width: percentage($target/$context);
 	width: $element-width;
@@ -133,4 +125,25 @@ $context: 1200;
 @mixin font-size($sizeValue: 16) {
   font-size: $sizeValue + px;
   font-size: ($sizeValue / 10) + rem; // Convert pixels to decimal
+}
+
+@mixin ck-font-face (
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal
+) {
+
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+         url('#{$file-path}.woff') format('woff'),
+         url('#{$file-path}.ttf') format('truetype'),
+         url('#{$file-path}.svg##{$font-family}') format('svg');
+  }
+
 }
