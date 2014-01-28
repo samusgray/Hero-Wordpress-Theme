@@ -14,8 +14,8 @@
 
   <section id="content" class="page-content--with-sidebar">
     <?php include('components/typography/_typography.php'); ?>
-    <?php include('components/buttons/_buttons.php'); ?>   
-    <?php include('components/driver/_driverr.php'); ?>
+    <?php include('components/button/_button.php'); ?>   
+    <?php include('components/driver/_driver.php'); ?>
   </section><!-- #content -->
 
   <?php get_sidebar(); ?>
