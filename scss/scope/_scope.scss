@@ -113,11 +113,11 @@ $context: 1200;
 	float: left;
 }
 
-@mixin push-left($margin) {
+@mixin push-left($margin, $context: $context) {
   margin-left: percentage($margin / $context);
 }
 
-@mixin push-right($margin) {
+@mixin push-right($margin, $context: $context) {
   margin-right: percentage($margin / $context);
 }
 
