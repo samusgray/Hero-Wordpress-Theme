@@ -22,7 +22,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php _hero_content_nav( 'nav-below' ); ?>
+			<!-- Pagination goes here. -->
 
 		<?php else : ?>
 
