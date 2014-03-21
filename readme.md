@@ -1,25 +1,23 @@
 # Hero Theme
+## A starter theme designed for rapid Wordpress development.
 
-## A starter theme developed for rapid Wordpress development. 
+### Theme Includes:
 
-### Includes:
-
-- Live Styleguide
-- Useful Grunt plugins
+#### Sass:
 - Sass w/ Compass
 - Small mixin library for type and layout
-- Reset.css
-- JS minification / concatination
-- HTTP Compression
-- jQuery CDN and local fallback
-- Basic theme templates (page.php, header.php, 404.php, etc.)
-- Useful functions.php file
-- .gitignore
+- A reset.scss partial
 - IE stylesheet
 
-### Credit:
+#### Javascript: 
+- JS minification / concatination
+- jQuery CDN and local fallback
+- Smart .gitignore
 
-- HTML5 Reset Theme
-- YeoPress Yeoman Generator
-- _s Theme
-- Twenty Twelve Wordpress Theme
+#### Template Workflow:
+- Components directory and grunt task to create new components
+- Basic theme templates (page.php, header.php, 404.php, etc.)
+- Useful functions.php file
+
+### Comming Soon
+- Susy for magic layouts
