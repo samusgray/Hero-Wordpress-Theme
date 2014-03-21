@@ -19,5 +19,24 @@
 - Basic theme templates (page.php, header.php, 404.php, etc.)
 - Useful functions.php file
 
+### How To Use:
+#### Clone the directory into your Wordpress themes folder
+```
+cd myproject/wp-content/themes/
+git clone git@github.com:mragray/Hero-Wordpress-Theme.git
+mv Hero-Wordpress-Theme myproject-theme-name
+```
+#### Install Node modules with NPM
+```
+cd myproject-theme-name
+npm install
+```
+
+#### Start grunt tasks
+```
+grunt
+```
+Profit!
+
 ### Comming Soon
 - Susy for magic layouts
