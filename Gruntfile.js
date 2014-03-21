@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       /* watch and see if our javascript files change, or new packages are installed */
       scripts: {
         files: ['js/dev/*.js'],
-        tasks: ['copy:scripts', 'uglify'],
+        tasks: ['uglify'],
         options: {
           livereload: true
         }
@@ -78,12 +78,14 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compress our CSS, please.
-    csso: {
-      dist: {
-        files: {
-          'style.css': ['style.css']
-        }
+    copy: {
+      scripts: {
+        files: [{
+          expand: true,
+          cwd: 'js/dev',
+          src: ['**'],
+          dest: 'js'
+        }]
       }
     },
     
@@ -105,8 +107,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', 'watch');
-  grunt.registerTask('check', ['autoprefixer', 'uglify']);
-  grunt.registerTask('js', ['uglify']);
-  grunt.registerTask('scaff', ['scaffold']);
-
+  grunt.registerTask('scaff', 'scaffold');
+  grunt.registerTask('js', 'uglify');
+  grunt.registerTask('build', ['autoprefixer', 'copy:scripts', 'uglify']);
 }
