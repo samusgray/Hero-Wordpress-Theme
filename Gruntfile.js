@@ -5,21 +5,25 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    // Use Compass and obey the config file.
-    compass: {
-      dev: {
+    sass: {
+      dist: {
         options: {
-          config: 'config.rb',
-          force: true
+          style: 'expanded',
+          require: 'susy'
+        },        
+        files: {
+          'style.css' : 'scss/style.scss'
         }
       }
     },
-
-    // Live Reload our Sass files
     watch: {
-      sass: {
+      css: {
         files: ['scss/**/*.scss','components/**/*.scss', 'components/*.scss'],
-        tasks: ['compass:dev']
+        tasks: ['sass'],
+        options: {
+          style: 'expanded',
+          require: 'susy'
+        }
       },
       /* watch and see if our javascript files change, or new packages are installed */
       scripts: {

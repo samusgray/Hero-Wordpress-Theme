@@ -1,9 +1,269 @@
 /*!  
-Theme Name: Your Theme Name
-Theme URI: http://yourwebsite.com
-Description: A heroic theme customized just for the BIC.
-Author: Your Name
-Author URI: http://yourwebsite.com
-Version: 2.0
+Theme Name: Ck Hero New _hero
+Theme URI: http://commercekitchen.com
+Description: A heroic theme customized just for you.
+Author: Commerce Kitchen
+Author URI: http://commercekitchen.com
+Version: 1.0 
+Designed by Alex Hoffman
+Developed by Aaron Gray 
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}img{max-width:100%}*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.clear{zoom:1}.clear:before,.clear:after{content:"\0020";display:block;height:0;overflow:hidden}.clear:after{clear:both}@font-face{font-family:'human_italic';src:url("font/human_italic/CoreHumanistSans-Italic-webfont.eot");src:url("font/human_italic/CoreHumanistSans-Italic-webfont.eot?#iefix") format("embedded-opentype"),url("font/human_italic/CoreHumanistSans-Italic-webfont.woff") format("woff"),url("font/human_italic/CoreHumanistSans-Italic-webfont.ttf") format("truetype"),url("font/human_italic/CoreHumanistSans-Italic-webfont.svg#corehumanistsans-italicRg") format("svg");font-weight:normal;font-style:normal}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}.screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#21759b;display:block;font-size:14px;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.contrast-link{color:#fff}.style-item{margin-bottom:20px}html,body,.site{overflow-x:hidden;height:100%;background:#fff}@media screen and (max-width: 600px){.menu-toggle,.main-navigation.toggled .nav-menu{display:block}.main-navigation ul{display:none}}.entry-content img,.comment-content img,.widget img{max-width:100%}img[class*="align"],img[class*="wp-image-"],img[class*="attachment-"]{height:auto}img.size-full,img.size-large,img.header-image,img.wp-post-image{max-width:100%;height:auto}embed,iframe,object,video{max-width:100%}.alignleft{float:left}.alignright{float:right}.aligncenter{display:block;margin-left:auto;margin-right:auto}img.alignleft{margin:12px 24px 12px 0;margin:0.857142857rem 1.714285714rem 0.857142857rem 0}img.alignright{margin:12px 0 12px 24px;margin:0.857142857rem 0 0.857142857rem 1.714285714rem}img.aligncenter{margin-top:12px;margin-top:0.857142857rem;margin-bottom:12px;margin-bottom:0.857142857rem}.wp-caption{max-width:100%;padding:4px}img.wp-smiley,.rsswidget img{border:0;border-radius:0;box-shadow:none;margin-bottom:0;margin-top:0;padding:0}.entry-content dl.gallery-item{margin:0}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both;
+  zoom: 1;
+}
+.clear:before, .clear:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clear:after {
+  clear: both;
+}
+
+@font-face {
+  font-family: "font-name";
+  font-weight: normal;
+  font-style: normal;
+  src: url("font/font-name/font-name.eot");
+  src: url("font/font-name/font-name.eot?#iefix") format("embedded-opentype"), url("font/font-name/font-name.woff") format("woff"), url("font/font-name/font-name.ttf") format("truetype"), url("font/font-name/font-name.svg#font-name") format("svg");
+}
+/* Text meant only for screen readers */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
+}
+
+.contrast-link {
+  color: white;
+}
+
+html, body {
+  font-size: 62.5%;
+}
+
+p, h1, h2, h3, h4, h5, h6, blockquote {
+  margin-bottom: 27px;
+}
+
+p {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.style-item {
+  margin-bottom: 20px;
+}
+
+html, body, .site {
+  overflow-x: hidden;
+  height: 100%;
+  background: white;
+}
+
+@media screen and (max-width: 600px) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
+
+  .main-navigation ul {
+    display: none;
+  }
+}
+.site-content {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* =Repeatable patterns
+-------------------------------------------------------------- */
+/* Responsive images */
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 100%;
+  /* Fluid images for posts, comments, and widgets */
+}
+
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+  max-width: 100%;
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Images */
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignleft {
+  margin: 12px 24px 12px 0;
+  margin: 0.857142857rem 1.714285714rem 0.857142857rem 0;
+}
+
+img.alignright {
+  margin: 12px 0 12px 24px;
+  margin: 0.857142857rem 0 0.857142857rem 1.714285714rem;
+}
+
+img.aligncenter {
+  margin-top: 12px;
+  margin-top: 0.857142857rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.857142857rem;
+}
+
+.wp-caption {
+  max-width: 100%;
+  /* Keep wide captions from overflowing their container. */
+  padding: 4px;
+}
+
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.entry-content dl.gallery-item {
+  margin: 0;
+}

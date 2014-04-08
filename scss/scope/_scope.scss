@@ -1,7 +1,5 @@
 @import "reset";
 
-$context: 1200;
-
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 %clearfix { 
@@ -92,26 +90,26 @@ $context: 1200;
 
 // Layout
 
-@mixin container($context: $context) {
-  max-width: $context + px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  @extend %clearfix;
-}
+// @mixin container($context: $context) {
+//   max-width: $context + px;
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   @extend %clearfix;
+// }
 
-@mixin span($target) {
-	$element-width: percentage($target/$context);
-	width: $element-width;
-	display: block;
-	float: left;
-}
+// @mixin span($target) {
+// 	$element-width: percentage($target/$context);
+// 	width: $element-width;
+// 	display: block;
+// 	float: left;
+// }
 
-@mixin nest($nested-target, $nested-context) {
-	width: percentage($nested-target/$nested-context);
-	display: block;
-	float: left;
-}
+// @mixin nest($nested-target, $nested-context) {
+// 	width: percentage($nested-target/$nested-context);
+// 	display: block;
+// 	float: left;
+// }
 
 @mixin push-left($margin, $context: $context) {
   margin-left: percentage($margin / $context);
@@ -123,9 +121,15 @@ $context: 1200;
 
 // Fonts
 
-@mixin font-size($sizeValue: 16) {
-  font-size: $sizeValue + px;
-  font-size: ($sizeValue / 10) + rem; // Convert pixels to decimal
+@mixin font-size(
+  $font-size,
+  $line-height: 1.5
+  ) {
+  // Use falback for IE8
+  font-size: $font-size + px;
+  // Convert pixels to decimal
+  font-size: ($font-size / 10) + rem;
+  line-height: $line-height;
 }
 
 @mixin ck-font-face (
