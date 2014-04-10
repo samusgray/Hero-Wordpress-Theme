@@ -1,0 +1,11 @@
+.featured-talks-container {
+  background: $black;
+}
+
+.featured-talks-content {
+  @include container;
+}
+
+.featured-talk {
+  @include gallery(6 of 12);
+}

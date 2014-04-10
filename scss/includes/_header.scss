@@ -1,0 +1,12 @@
+.site-header {
+  height: 60px;
+  background: $white;
+}
+
+.site-header-contnet {
+  @include container;
+}
+
+.menu {
+  @include span(6 of 12 at 6);
+}

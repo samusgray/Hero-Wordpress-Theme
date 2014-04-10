@@ -2,9 +2,10 @@ html, body { font-size: 62.5%; }
 
 p,h1,h2,h3,h4,h5,h6, blockquote {
   margin-bottom: 27px;
+  font-family: $hel;
 }
 
-p {
+p, li { 
   @include font-size(18);
 }
 
@@ -15,3 +16,4 @@ h1 {
 h2 {
   @include font-size(30);
 }
+

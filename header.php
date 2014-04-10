@@ -35,10 +35,19 @@
 
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+    <div class="site-header-contnet">
+      <nav id="utilNav" class="utility-nav" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'util-nav' ) ); ?>
+      </nav><!-- #site-navigation -->
+  		<nav id="site-nav" class="site-nav" role="navigation">
+        <?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
+  		</nav><!-- #site-navigation -->
+    </div>
+  </header><!-- #masthead -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'temp' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
-		</nav><!-- #site-navigation -->
 
-	</header><!-- #masthead -->
+
+
+
+
+

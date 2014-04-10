@@ -87,11 +87,11 @@ img {
 }
 
 @font-face {
-  font-family: "font-name";
+  font-family: "HelveticaNeue";
   font-weight: normal;
   font-style: normal;
-  src: url("font/font-name/font-name.eot");
-  src: url("font/font-name/font-name.eot?#iefix") format("embedded-opentype"), url("font/font-name/font-name.woff") format("woff"), url("font/font-name/font-name.ttf") format("truetype"), url("font/font-name/font-name.svg#font-name") format("svg");
+  src: url("fonts/HelveticaNeue.eot");
+  src: url("fonts/HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeue.woff") format("woff"), url("fonts/HelveticaNeue.ttf") format("truetype"), url("fonts/HelveticaNeue.svg#HelveticaNeue") format("svg");
 }
 /* Text meant only for screen readers */
 .screen-reader-text {
@@ -125,15 +125,84 @@ img {
   color: white;
 }
 
+.site-header {
+  height: 60px;
+  background: white;
+}
+
+.site-header-contnet {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-header-contnet::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.menu {
+  width: 50%;
+  float: left;
+}
+
+.home-hero-container {
+  background: url("img/home-feature.jpg") right center no-repeat fixed;
+  background-size: cover;
+}
+
+.home-hero-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-hero-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.home-hero-sidebar {
+  width: 33.33333%;
+  float: left;
+  position: relative;
+  height: 600px;
+  background: #e00000;
+  box-shadow: -400px 0px 0px 0px #e00000;
+}
+
+.home-hero-secondary {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: white;
+  box-shadow: -400px 0px 0px 0px white;
+}
+
+.home-hero-image {
+  width: 66.66667%;
+  float: left;
+  position: relative;
+  height: 600px;
+}
+
+.home-hero-x {
+  position: absolute;
+  bottom: 0;
+  left: -55px;
+}
+
 html, body {
   font-size: 62.5%;
 }
 
 p, h1, h2, h3, h4, h5, h6, blockquote {
   margin-bottom: 27px;
+  font-family: HelveticaNeue, sans-serif;
 }
 
-p {
+p, li {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -151,13 +220,79 @@ h2 {
   line-height: 1.5;
 }
 
-.style-item {
-  margin-bottom: 20px;
+.home-blurb-container {
+  background: white;
+}
+
+.home-blurb-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.home-blurb-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.featured-talks-container {
+  background: #4b4b4b;
+}
+
+.featured-talks-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.featured-talks-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.featured-talk {
+  width: 50%;
+  float: left;
+}
+.featured-talk:nth-child(2n + 1) {
+  margin-left: 0;
+  margin-right: -100%;
+  clear: both;
+  margin-left: 0;
+}
+.featured-talk:nth-child(2n + 2) {
+  margin-left: 50%;
+  margin-right: -100%;
+  clear: none;
+}
+
+.featured-articles-container {
+  background: #e00000;
+}
+
+.featured-articles-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.featured-articles-content::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.featured-article {
+  width: 25%;
+  float: left;
+  background: white;
+}
+
+.featured-article:first-child {
+  margin-left: 0;
 }
 
 html, body, .site {
-  overflow-x: hidden;
-  height: 100%;
   background: white;
 }
 
@@ -171,17 +306,6 @@ html, body, .site {
     display: none;
   }
 }
-.site-content {
-  max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.site-content::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
 /* =Repeatable patterns
 -------------------------------------------------------------- */
 /* Responsive images */

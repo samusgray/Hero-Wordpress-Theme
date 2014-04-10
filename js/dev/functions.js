@@ -35,3 +35,11 @@ jQuery(function($) {
       container.className += ' toggled';
   };
 } )();
+
+$( document ).ready(function() {
+  // Home Hero 
+});
+
+
+
+

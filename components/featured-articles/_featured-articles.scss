@@ -1,0 +1,17 @@
+.featured-articles-container {
+  background: $red;
+}
+
+.featured-articles-content {
+  @include container;
+}
+
+.featured-article {
+  @include span(3 of 12);
+  background: $white;
+  margin-left: gutter(2);
+}
+
+.featured-article:first-child {
+  margin-left: 0;
+}

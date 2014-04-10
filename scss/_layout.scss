@@ -1,6 +1,4 @@
 html, body, .site {
-  overflow-x: hidden;
-  height: 100%;
   background: $white;
 }
 
@@ -13,4 +11,6 @@ html, body, .site {
   .main-navigation ul {
     display: none;
   }
+}
+.site-content {
 }

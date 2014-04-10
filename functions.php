@@ -91,9 +91,6 @@ function _hero_scripts_styles() {
   if(!(strpos($_SERVER['SERVER_NAME'], 'localhost') === false)){
      wp_enqueue_script( 'livereload', 'http://localhost:35729/livereload.js' );
   }
-
-  if (is_page(styleguide))
-    wp_enqueue_script( 'ck-styleguide', get_template_directory_uri() . '/styleguide/styleguide.js', array('jquery'), true );
 }
 add_action( 'wp_enqueue_scripts', '_hero_scripts_styles' );
 
@@ -113,8 +110,9 @@ add_action( 'wp_enqueue_scripts', '_hero_scripts_styles' );
 		register_nav_menus(
 			array(
 				'main-nav' => 'Main Navigation',
-				'secondary-nav' => 'Footer Navigation',
-				// 'sidebar-menu' => 'Sidebar Menu'
+        'util-nav' => 'Utility Navigation',
+        'page-nav' => 'Page Navigation',
+				'secondary-nav' => 'Footer Navigation'
 			)
 		);
 	}
@@ -173,3 +171,13 @@ function _hero_entry_meta() {
   );
 }
 endif;
+
+// Infinate Scroll
+add_theme_support( 'infinite-scroll', array(
+    'type'           => 'click',
+    'footer_widgets' => true,
+    'container'      => 'content',
+    'render'         => true,
+) );
+
+

@@ -1,0 +1,12 @@
+.home-blurb-container {
+  background: $white;
+}
+
+.home-blurb-content {
+  @include container;
+  text-align: center;
+}
+
+.blurb-primary {
+
+}
