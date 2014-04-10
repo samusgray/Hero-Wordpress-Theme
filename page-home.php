@@ -14,10 +14,7 @@ get_header(); ?>
     <div id="content" role="main">
 
       <?php while ( have_posts() ) : the_post(); ?>
-        <?php include('components/home-hero/_home-hero.php'); ?>
-        <?php include('components/home-blurb/_home-blurb.php'); ?>
-        <?php include('components/featured-talks/_featured-talks.php'); ?>
-        <?php include('components/featured-articles/_featured-articles.php'); ?>
+        <!-- <?php include('components/name/_name.php'); ?> -->
       <?php endwhile; // end of the loop. ?>
 
     </div><!-- #content -->

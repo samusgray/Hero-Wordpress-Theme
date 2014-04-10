@@ -19,11 +19,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: ['scss/**/*.scss','components/**/*.scss', 'components/*.scss'],
-        tasks: ['sass'],
-        options: {
-          style: 'expanded',
-          require: 'susy'
-        }
+        tasks: 'sass',
       },
       /* watch and see if our javascript files change, or new packages are installed */
       scripts: {

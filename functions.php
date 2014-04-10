@@ -171,13 +171,3 @@ function _hero_entry_meta() {
   );
 }
 endif;
-
-// Infinate Scroll
-add_theme_support( 'infinite-scroll', array(
-    'type'           => 'click',
-    'footer_widgets' => true,
-    'container'      => 'content',
-    'render'         => true,
-) );
-
-
